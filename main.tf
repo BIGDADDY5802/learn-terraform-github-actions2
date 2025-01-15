@@ -26,7 +26,7 @@ terraform {
 provider "aws" {
   region = "us-west-2"
 }
-
+/*
 resource "random_pet" "sg" {}
 
 data "aws_ami" "ubuntu" {
@@ -59,9 +59,9 @@ resource "aws_instance" "web" {
               systemctl restart apache2
               EOF
 }
-
+*/
 resource "aws_security_group" "web-sg" {
-  name = "${random_pet.sg.id}-sg"
+  name = "sg01"
   ingress {
     from_port   = 8080
     to_port     = 8080
