@@ -15,10 +15,10 @@ terraform {
   required_version = ">= 1.1.0"
 
   cloud {
-    organization = "REPLACE_ME"
+    organization = "studyforschool"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "learn-terraform-github-actions_2"
     }
   }
 }
@@ -42,7 +42,7 @@ data "aws_ami" "ubuntu" {
     values = ["hvm"]
   }
 
-  owners = ["099720109477"] # Canonical
+  #owners = ["099720109477"] # Canonical
 }
 
 resource "aws_instance" "web" {
